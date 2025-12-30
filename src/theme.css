@@ -1,0 +1,185 @@
+:root {
+  /* ===============================
+     🟫 Warm Neutral – Light Mode
+     =============================== */
+
+  --bg: #faf7f2;                /* warm paper */
+  --card-bg: #ffffff;           /* clean surface */
+  --card-active: #fffaf0;       /* active highlight */
+
+  --text: #3b2f2f;              /* warm dark brown */
+  --muted-text: #7a6f65;
+
+  --border: #e7d8c9;
+
+  /* Fairness & status */
+  --fair: #9bbfa5;              /* sage green */
+  --fair-soft: #eef6f1;
+  --danger: #e6a6a6;            /* muted rose */
+
+  /* Accents */
+  --accent: #8b5a2b;            /* coffee brown */
+  --accent-soft: #f5ebe0;
+
+  /* Elevation */
+  --shadow-soft: 0 4px 14px rgba(0, 0, 0, 0.06);
+  --shadow-hover: 0 10px 26px rgba(0, 0, 0, 0.12);
+
+  --radius: 14px;
+}
+
+/* ===============================
+   🌙 Dark Mode – Cozy Night
+   =============================== */
+
+body.dark {
+  --bg: #1c1917;
+  --card-bg: #292524;
+  --card-active: #3a2f2a;
+
+  --text: #f5f5f4;
+  --muted-text: #a8a29e;
+
+  --border: #44403c;
+
+  --fair: #9bbfa5;
+  --fair-soft: #2f3e34;
+  --danger: #f0a5a5;
+
+  --accent: #d6b892;
+  --accent-soft: #3b2f2a;
+
+  --shadow-soft: 0 6px 20px rgba(0, 0, 0, 0.5);
+  --shadow-hover: 0 12px 32px rgba(0, 0, 0, 0.6);
+}
+
+/* ===============================
+   🌍 Global
+   =============================== */
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+/* ===============================
+   🔘 Buttons
+   =============================== */
+
+button {
+  background: var(--accent);
+  color: #fffaf0;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:hover:not(:disabled) {
+  filter: brightness(1.05);
+  transform: translateY(-2px);
+}
+
+button:active:not(:disabled) {
+  transform: scale(0.97);
+}
+
+button:disabled {
+  background: #cbd5c0;
+  cursor: not-allowed;
+}
+
+/* ===============================
+   🧾 Inputs
+   =============================== */
+
+input,
+select {
+  padding: 6px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: var(--card-bg);
+  color: var(--text);
+}
+
+/* ===============================
+   🃏 Cards
+   =============================== */
+
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 14px;
+  box-shadow: var(--shadow-soft);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+}
+
+/* ===============================
+   🧍 Availability Cards
+   =============================== */
+
+.availability-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
+}
+
+.availability-card:hover {
+  box-shadow: var(--shadow-hover);
+}
+
+.availability-card.active {
+  background: var(--fair-soft);
+  border: 2px solid var(--fair);
+}
+
+/* ===============================
+   ✨ Transitions
+   =============================== */
+
+* {
+  transition: all 0.2s ease;
+}
+
+/* ===============================
+   📱 Mobile
+   =============================== */
+
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+
+  h2,
+  h3 {
+    font-size: 18px;
+  }
+
+  .card {
+    padding: 10px;
+  }
+
+  button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  input,
+  select {
+    width: 100%;
+    margin-top: 6px;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 6px;
+  }
+}
