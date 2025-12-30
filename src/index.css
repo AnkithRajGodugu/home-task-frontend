@@ -16,3 +16,32 @@ button {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   margin-bottom: 15px;
 }
+
+/* 🔑 Compact input fields */
+input {
+  height: 20px;                 /* 👈 THIS is the key */
+  padding: 6px 10px;            /* smaller vertical padding */
+  font-size: 13px;              /* slightly smaller text */
+  line-height: 1.2;
+  border-radius: 6px;           /* less bulky */
+  border: 1px solid var(--border);
+  background: var(--card-bg);
+  color: var(--text);
+  outline: none;
+}
+
+input::placeholder {
+  color: #94a3b8;
+  font-size: 12.5px;
+}
+
+input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 1.5px rgba(134, 196, 154, 0.25);
+}
+
+/* Password toggle spacing fix */
+input[type="password"],
+input[type="text"] {
+  height: 20px;
+}
